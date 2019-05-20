@@ -31,11 +31,11 @@ msgid "Here are supported PostgreSQL versions:"
 msgstr "サポートしているPostgreSQLのバージョンは次の通りです。"
 
 msgid ""
-"  * 9.3\n"
 "  * 9.4\n"
 "  * 9.5\n"
 "  * 9.6\n"
-"  * 10"
+"  * 10\n"
+"  * 11"
 msgstr ""
 
 msgid ""
@@ -49,25 +49,22 @@ msgstr "次の中から自分のプラットフォーム用のドキュメント
 msgid "  * [Debian GNU/Linux](debian.html)"
 msgstr ""
 
-msgid "    * Jessie"
-msgstr ""
-
 msgid "    * Stretch"
 msgstr ""
 
 msgid "  * [Ubuntu](ubuntu.html)"
 msgstr ""
 
-msgid "    * 14.04"
-msgstr ""
-
 msgid "    * 16.04"
 msgstr ""
 
-msgid "    * 17.10"
+msgid "    * 18.04"
 msgstr ""
 
-msgid "    * 18.04"
+msgid "    * 18.10"
+msgstr ""
+
+msgid "    * 19.04"
 msgstr ""
 
 msgid "  * [CentOS](centos.html)"
@@ -94,10 +91,7 @@ msgstr ""
 msgid "{% for windows_postgresql_version in site.windows_postgresql_versions %}"
 msgstr ""
 
-msgid "    * 32bit + PostgreSQL {{ windows_postgresql_version }}"
-msgstr ""
-
-msgid "    * 64bit + PostgreSQL {{ windows_postgresql_version }}"
+msgid "    * PostgreSQL {{ windows_postgresql_version }}"
 msgstr ""
 
 msgid "{% endfor %}"

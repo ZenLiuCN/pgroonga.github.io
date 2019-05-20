@@ -4,6 +4,186 @@ title: News
 
 # News
 
+## 2.1.9: 2019-05-08 {#version-2-1-9}
+
+  * Added support for Groonga 9.0.2.
+
+  * [[Windows][windows]] Upgraded bundled Groonga to 9.0.2.
+
+  * [[Windows][windows]] Added Upgraded bundled Groonga to 9.0.2.
+
+  * [[Ubuntu][ubuntu]] Added support for Ubuntu 18.10.
+
+  * [[Ubuntu][ubuntu]] Added support for Ubuntu 19.04.
+
+  * [[Ubuntu][ubuntu]] Dropped support for Ubuntu 14.04.
+
+## 2.1.8: 2019-01-11 {#version-2-1-8}
+
+  * [[Windows][windows]] Upgraded bundled Groonga to 8.1.0.
+
+  * [[`pgroonga_database`][pgroonga_database]: Added. It provides functions that manage PGroonga database. For now, [`pgroonga_database_remove` function] is only provided.
+
+## 2.1.7: 2018-12-25 {#version-2-1-7}
+
+### Improvements
+
+  * [[Windows][windows]] Upgraded bundled Groonga to 8.0.9.
+
+  * Added support for PostgreSQL 11.
+
+  * [[`pgroonga_tokenize` function][tokenize]] Added a new function
+    that tokenizes the given text.
+
+  * [[`CREATE INDEX USING PGroonga`][create-index-using-pgroonga]]
+    Added support for token filter options.
+
+  * [[`pgroonga_normalize` function][normalize]] Added support for
+    normalizer options.
+
+  * [[`pgroonga_vacuum` function][vacuum]] Added a new function that
+    removes garbage in Groonga explicitly.
+
+### Fixes
+
+  * Fixed a crash bug on error in `SELECT`.
+
+  * Fixed a bug that needless records in `IndexStatuses` internal
+    Groonga table on `VACUUM`.
+    [Gitter#5c10aad7e4787d16e3833ffe][Reported by kwata]
+
+  * Fixed a bug that wrong ctid may be returned in `SELECT`.
+    [GitHub#89][Reported by Daisuke Ando]
+
+  * [[`pgroonga_escape` function][escape]] Fixed a bug that
+    `pgroonga_escape(float4)` returns wrong result.
+
+### Thanks
+
+  * kwata
+
+  * Daisuke Ando
+
+## 2.1.6: 2018-10-18 {#version-2-1-6}
+
+### Improvements
+
+  * [[Windows][windows]] Upgraded bundled Groonga to 8.0.7.
+
+  * Reduces memory usage on multiple sub-selects.
+
+  * Reduces memory usage on index only scan.
+    [groonga-dev,04684][Reported by Kawakami]
+
+### Fixes
+
+  * Fixed a bug that streaming replication doesn't work.
+    [GitHub#84][Reported by tongsama]
+
+### Thanks
+
+  * tongsama
+
+  * Kawakami
+
+## 2.1.4: 2018-09-18 {#version-2-1-4}
+
+### Improvements
+
+  * Use resource release mechanism to release internal data in scan.
+    [GitHub#82][Reported by dodaisuke]
+
+### Thanks
+
+  * dodaisuke
+
+## 2.1.3: 2018-09-11 {#version-2-1-3}
+
+### Improvements
+
+  * [[Windows][windows]] Upgraded bundled Groonga to 8.0.6.
+
+  * Added debug logs.
+
+  * Added a workaround for error by `SELECT FOR UPDATE NOWAIT`.
+    It's a PostgreSQL problem.
+    [GitHub#80][Reported by dodaisuke]
+
+  * [`&@~` operator][query-v2] Added valid index check.
+
+  * Improved PGroonga index detection for PGroonga < 9.6.
+
+  * [[`CREATE INDEX USING PGroonga`][create-index-using-pgroonga]]
+    Added `query_allow_column` option to use `column:...` syntax in
+    `&@~`.
+
+### Fixes
+
+  * Fixed a crash bug that is occurred when executing `&@~` by
+    sequential search with multiple indexes.
+
+### Thanks
+
+  * dodaisuke
+
+## 2.1.2: 2018-08-23 {#version-2-1-2}
+
+### Improvements
+
+  * Added support for PostgreSQL 11.
+
+  * [[`pgroonga_score` function][score]] Added missing error checks.
+
+  * Added more debug logs on insert and delete.
+
+### Fixes
+
+  * [[`pgroonga_score` function][score]] Fixed a bug that score is 0 when
+    HOT redirection is occurred.
+
+## 2.1.1: 2018-08-08 {#version-2-1-1}
+
+### Fixes
+
+  * Fixed packages.
+
+## 2.1.0: 2018-08-08 {#version-2-1-0}
+
+### Improvements
+
+  * Improved cost estimation.
+
+  * [[Travis CI][travis-ci]] Added support for WAL with `PGROONGA_MASTER=yes`.
+    [GitHub#71][Reported by Jason Truesdell]
+
+  * Added support for closing unused files after recreating indexes.
+    [GitHub#72][Reported by Jason Truesdell]
+
+  * Added support for index only scan availability check for vector
+    column.
+
+  * [[Windows][windows]] Upgraded bundled Groonga to 8.0.5.
+
+  * Required Groonga 8.0.5 or later.
+
+  * [[`pgroonga_score` function][score]] Added debug logs.
+
+  * [[Debian][debian]] Dropped Debian GNU/Linux Jessie support.
+
+  * [[Ubuntu][ubuntu]] Dropped Ubuntu 17.10 support.
+
+### Fixes
+
+  * [WAL] Fixed a bug that WAL may be broken when multiple updates are
+    occurred at once.
+    [GitHub#70][Reported by Eiji Ito]
+
+### Thanks
+
+  * Jason Truesdell
+
+  * Eiji Ito
+
 ## 2.0.9: 2018-07-04 {#version-2-0-9}
 
 ### Fixes
@@ -409,7 +589,7 @@ This is the second major release! It's upgradable from 1.X! 2.X is backward comp
 
   * Required Groonga 6.1.1 or later.
 
-  * [[`pgroonga_check`](../reference/modules/pgroonga-check.html)] Added. It checks PGroonga database consistency on startup. If PGroonga database is broken, it tries to recover the database.
+  * [[`pgroonga_check`][pgroonga-check]] Added. It checks PGroonga database consistency on startup. If PGroonga database is broken, it tries to recover the database.
 
   * Supported applying WAL on `INSERT`.
 
@@ -1002,6 +1182,15 @@ The first release!!!
 [score]:../reference/functions/pgroonga-score.html
 [is-writable]:../reference/functions/pgroonga-is-writable.html
 [normalize]:../reference/functions/pgroonga-normalize.html
+[tokenize]:../reference/functions/pgroonga-tokenize.html
+[escape]:../reference/functions/pgroonga-escape.html
+[vacuum]:../reference/functions/pgroonga-vacuum.html
+[database-remove]:../reference/functions/pgroonga-database-remove.html
 
 [match-escalation-threshold]:../reference/parameters/match-escalation-threshold.html
 [libgroonga-version]:../reference/parameters/libgroonga-version.html
+
+[pgoronga-check]:../reference/modules/pgroonga-check.html
+[pgoronga-database]:../reference/modules/pgroonga-database.html
+
+[travis-ci]:../how-to/travis-ci.html

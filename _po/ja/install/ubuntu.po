@@ -28,16 +28,16 @@ msgstr "## サポートしているバージョン"
 msgid "Here are supported Ubuntu versions:"
 msgstr "サポートしているUbuntuのバージョンは次の通りです。"
 
-msgid "  * Ubuntu 14.04"
-msgstr ""
-
 msgid "  * Ubuntu 16.04"
 msgstr ""
 
-msgid "  * Ubuntu 17.10"
+msgid "  * Ubuntu 18.04"
 msgstr ""
 
-msgid "  * Ubuntu 18.04"
+msgid "  * Ubuntu 18.10"
+msgstr ""
+
+msgid "  * Ubuntu 19.04"
 msgstr ""
 
 msgid "## How to install"
@@ -46,32 +46,27 @@ msgstr "## インストール方法"
 msgid "You can use the following instruction to install PGroonga on Ubuntu."
 msgstr "UbuntuでPGroongaをインストールする手順は次の通りです。"
 
-msgid "If you're using Ubuntu 14.04, install `postgresql-9.3-pgroonga` package."
-msgstr "Ubuntu 14.04を使っている場合は`postgresql-9.3-pgroonga`パッケージをインストールしてください。"
-
 msgid "If you're using Ubuntu 16.04, install `postgresql-9.5-pgroonga` package."
 msgstr "Ubuntu 16.04を使っている場合は`postgresql-9.5-pgroonga`パッケージをインストールしてください。"
 
-msgid "If you're using Ubuntu 17.10, install `postgresql-9.6-pgroonga` package."
-msgstr "Ubuntu 17.10を使っている場合は`postgresql-9.6-pgroonga`パッケージをインストールしてください。"
+msgid "If you're using Ubuntu 19.04, install `postgresql-11-pgroonga` package."
+msgstr "Ubuntu 19.04を使っている場合は`postgresql-11-pgroonga`パッケージをインストールしてください。"
 
 msgid "Otherwise, install `postgresql-10-pgroonga` package:"
 msgstr "それ以外の場合は`postgresql-10-pgroonga`パッケージをインストールしてください。"
 
 msgid ""
 "```text\n"
-"% sudo apt-get install -y software-properties-common\n"
+"% sudo apt install -y software-properties-common\n"
 "% sudo add-apt-repository -y universe\n"
 "% sudo add-apt-repository -y ppa:groonga/ppa\n"
 "% sudo apt-get update\n"
-"Ubuntu 14.04:\n"
-"% sudo apt-get install -y -V postgresql-9.3-pgroonga\n"
 "Ubuntu 16.04:\n"
-"% sudo apt-get install -y -V postgresql-9.5-pgroonga\n"
-"Ubuntu 17.10:\n"
-"% sudo apt-get install -y -V postgresql-9.6-pgroonga\n"
+"% sudo apt install -y -V postgresql-9.5-pgroonga\n"
+"Ubuntu 19.04:\n"
+"% sudo apt install -y -V postgresql-11-pgroonga\n"
 "Others:\n"
-"% sudo apt-get install -y -V postgresql-10-pgroonga\n"
+"% sudo apt install -y -V postgresql-10-pgroonga\n"
 "```"
 msgstr ""
 
@@ -84,7 +79,7 @@ msgstr ""
 
 msgid ""
 "```text\n"
-"% sudo apt-get install -y -V groonga-tokenizer-mecab\n"
+"% sudo apt install -y -V groonga-tokenizer-mecab\n"
 "```"
 msgstr ""
 

@@ -32,7 +32,7 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
 
 ### `text`用
 
-#### `pgroonga.text_full_text_search_ops_v2`演算子クラス（デフォルト） {#text-full-text-search-ops-v2}
+#### `pgroonga_text_full_text_search_ops_v2`演算子クラス（デフォルト） {#text-full-text-search-ops-v2}
 
   * [`LIKE`演算子][like]
 
@@ -78,7 +78,7 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
 
     * 1.2.1から非推奨です。代わりに[`&@~|`演算子][query-in-v2]を使ってください。
 
-#### `pgroonga_text_term_search_ops_v2`演算子クラス（デフォルト） {#text-term-search-ops-v2}
+#### `pgroonga_text_term_search_ops_v2`演算子クラス {#text-term-search-ops-v2}
 
   * `<`
 
@@ -482,6 +482,8 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
 
   * [`pgroonga_flush`関数][flush]
 
+  * [`pgroonga_database_remove`関数][database-remove]
+
   * [`pgroonga_highlight_html`関数][highlight-html]
 
   * [`pgroonga_is_writable`関数][is-writable]
@@ -505,6 +507,10 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
   * [`pgroonga_snippet_html`関数][snippet-html]
 
   * [`pgroonga_table_name`関数][table-name]
+
+  * [`pgroonga_tokenize`関数][tokenize]
+
+  * [`pgroonga_vacuum`関数][vacuum]
 
   * [`pgroonga_wal_apply`関数][wal-apply]
 
@@ -531,7 +537,9 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
 ## モジュール
 
 
-  * [`pgroonga_check`モジュール](modules/pgroonga-check.html)
+  * [`pgroonga_check`モジュール][pgroonga-check]
+
+  * [`pgroonga_database`モジュール][pgroonga-database]
 
 ## Groongaの関数
 
@@ -577,9 +585,10 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
 [upgrade-incompatible]:../upgrade/#incompatible-case
 
 [command]:functions/pgroonga-command.html
-[command-escape-value]:functions/pgroonga-command-escape-value.html)
+[command-escape-value]:functions/pgroonga-command-escape-value.html
 [escape]:functions/pgroonga-escape.html
 [flush]:functions/pgroonga-flush.html
+[database-remove]:functions/pgroonga-database-remove.html
 [highlight-html]:functions/pgroonga-highlight-html.html
 [is-writable]:functions/pgroonga-is-writable.html
 [match-positions-byte]:functions/pgroonga-match-positions-byte.html
@@ -592,6 +601,8 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
 [score]:functions/pgroonga-score.html
 [snippet-html]:functions/pgroonga-snippet-html.html
 [table-name]:functions/pgroonga-table-name.html
+[tokenize]:functions/pgroonga-tokenize.html
+[vacuum]:functions/pgroonga-vacuum.html
 [wal-apply]:functions/pgroonga-wal-apply.html
 [wal-truncate]:functions/pgroonga-wal-truncate.html
 
@@ -605,3 +616,6 @@ PGroongaは`pgroonga`スキーマに関数・演算子・演算子クラスな�
 [log-type]:parameters/log-type.html
 [query-log-path]:parameters/query-log-path.html
 [match-escalation-threshold]:parameters/match-escalation-threshold.html
+
+[pgroonga-check]:modules/pgroonga-check.html
+[pgroonga-database]:modules/pgroonga-database.html

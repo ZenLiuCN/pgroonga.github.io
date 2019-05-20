@@ -8,6 +8,24 @@ title: アップグレード
 
 以下は互換性のリストです。
 
+  * 2.1.8 -> 2.1.9: 互換
+
+  * 2.1.7 -> 2.1.8: 互換
+
+  * 2.1.6 -> 2.1.7: 互換
+
+  * 2.1.4 -> 2.1.6: 互換
+
+  * 2.1.3 -> 2.1.4: 互換
+
+  * 2.1.2 -> 2.1.3: 互換
+
+  * 2.1.1 -> 2.1.2: 互換
+
+  * 2.1.0 -> 2.1.1: 互換
+
+  * 2.0.9 -> 2.1.0: 互換
+
   * 2.0.8 -> 2.0.9: 互換
 
   * 2.0.7 -> 2.0.8: 互換
@@ -136,6 +154,12 @@ PGroongaをアップグレードするSQLは次の通りです。
 ALTER EXTENSION pgroonga UPDATE;
 ```
 
+もし[`pgroonga_database`モジュール][pgroonga-database]を使っているなら、次のSQLを実行して`pgroonga_database`モジュールをアップグレードする必要があります。
+
+```sql
+ALTER EXTENSION pgroonga_database UPDATE;
+```
+
 ## 参考
 
   * [`CREATE EXTENSION`]({{ site.postgresql_doc_base_url.ja }}/sql-createextension.html)
@@ -147,3 +171,5 @@ ALTER EXTENSION pgroonga UPDATE;
   * [`CREATE INDEX USING pgroonga`](../reference/create-index-using-pgroonga.html)
 
 [text-array-full-text-search-ops-v2]:../reference/#text-array-full-text-search-ops-v2
+
+[pgroonga-database]:../reference/modules/pgroonga-database.html

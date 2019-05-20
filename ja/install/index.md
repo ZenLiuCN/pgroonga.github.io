@@ -10,11 +10,11 @@ title: インストール
 
 サポートしているPostgreSQLのバージョンは次の通りです。
 
-  * 9.3
   * 9.4
   * 9.5
   * 9.6
   * 10
+  * 11
 
 もし、これより古いPostgreSQLを使っているなら、PGroongaをインストールする前にPostgreSQLをアップグレードしてください。
 
@@ -22,19 +22,17 @@ title: インストール
 
   * [Debian GNU/Linux](debian.html)
 
-    * Jessie
-
     * Stretch
 
   * [Ubuntu](ubuntu.html)
 
-    * 14.04
-
     * 16.04
 
-    * 17.10
-
     * 18.04
+
+    * 18.10
+
+    * 19.04
 
   * [CentOS](centos.html)
 
@@ -52,9 +50,7 @@ title: インストール
 
 {% for windows_postgresql_version in site.windows_postgresql_versions %}
 
-    * 32bit + PostgreSQL {{ windows_postgresql_version }}
-
-    * 64bit + PostgreSQL {{ windows_postgresql_version }}
+    * PostgreSQL {{ windows_postgresql_version }}
 
 {% endfor %}
 
